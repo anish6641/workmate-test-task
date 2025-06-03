@@ -19,6 +19,34 @@ This script processes employee data from CSV files and generates a payroll repor
     python3 main.py sample_data/data1.csv sample_data/data2.csv sample_data/data3.csv --report payout
     ```
 
+    For JSON output:
+
+    ```bash
+    python3 main.py sample_data/data1.csv --report payout --format json
+    ```
+
+    <pre>
+    [
+        {
+            "id": 1,
+            "name": "Alice Johnson",
+            "department": "Marketing",
+            "hours_worked": 160.0,
+            "hourly_rate": 50.0,
+            "payout": 8000.0
+        },
+        {
+            "id": 2,
+            "name": "Bob Smith",
+            "department": "Design",
+            "hours_worked": 150.0,
+            "hourly_rate": 40.0,
+            "payout": 6000.0
+        }
+    ]
+    </pre>
+
+
 4. Adding New Reports
 
 - To add a new report type:

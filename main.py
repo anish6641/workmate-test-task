@@ -4,14 +4,15 @@ from report import ReportFactory
 
 def main():
     parser = argparse.ArgumentParser(description="Employee payroll report generator")
-    parser.add_argument('files', nargs='*', help="CSV files to process")  # Files optional
+    parser.add_argument('files', nargs='*', help="CSV files to process")
     parser.add_argument('--report', required=True, help="Report type (e.g., payout)")
+    parser.add_argument('--format', choices=['table', 'json'], default='table', help="Output format (table or json)")
     
     args = parser.parse_args()
     
     try:
-        # Validate report type before parsing files
-        report = ReportFactory.create_report(args.report)  # Raises ValueError for invalid report
+        # Validate report type
+        report = ReportFactory.create_report(args.report)
         
         # Check for input files
         if not args.files:
@@ -26,7 +27,7 @@ def main():
             return
         
         # Generate report
-        output = report.generate(employees)
+        output = report.generate(employees, output_format=args.format)
         print(output)
         
     except ValueError as e:
