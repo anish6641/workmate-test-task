@@ -1,0 +1,4 @@
+email,name,id,department,rate,hours_worked
+david@example.com,David Brown,4,Engineering,45,165
+emma@example.com,Emma Davis,5,Marketing,55,170
+frank@example.com,Frank Wilson,6,Design,50,155
