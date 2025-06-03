@@ -1,0 +1,4 @@
+id,name,department,hours_worked,salary,email
+7,Grace Lee,Engineering,180,60,grace@example.com
+8,Henry Moore,HR,140,35,henry@example.com
+9,Isabella Taylor,Marketing,160,52,isabella@example.com
